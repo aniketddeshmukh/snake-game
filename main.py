@@ -36,10 +36,9 @@ while game_is_on:
     if Saanp.head.xcor() >280 or Saanp.head.xcor() < -280 or Saanp.head.ycor() > 280 or Saanp.head.xcor() < -280:
         game_is_on =False
         scoreboard.game_over()
+        
     #Collision with  tail
     for segment in Saanp.segments[1:]:
-        # if segment ==Saanp.head:
-        #     pass
         if Saanp.head.distance(segment)<10:
             game_is_on =False
             scoreboard.game_over()
